@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-textdirection="LTR" class="loading">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+ 
+    <title>
+        <%= title %>
+    </title>
+
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap.min.css">
+    <!-- font icons-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/fonts/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/fonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/sliders/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/pace.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/unslider.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/weather-icons/climacons.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN ROBUST CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/app.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <!-- END ROBUST CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/horizontal-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-overlay-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/calendars/clndr.min.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <!-- Table data -->
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/tables/datatable/dataTables.bootstrap4.min.css">
+    <!-- TOASTR -->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/toastr.css">
+    <script src="/app-assets/js/core/libraries/jquery.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var socket = io.connect('http://localhost:3000');
+        socket.on('server-send-admin', function(data) {
+            setTimeout(function() {
+                $.toast({
+                    heading: '<b>THÔNG BÁO</b>',
+                    text: data.info,
+                    position: 'bottom-right',
+                    icon: 'success',
+                    hideAfter: 5000
+                });
+                $("#alert").html("<audio autoplay><source src='/audio/a.mp3' type='audio/mpeg'></audio>");
+            }, 0);
+        });
+
+    socket.on('server-send-admin-totalVideo' , function(data){
+        setTimeout(function() {
+               $("#totalVideoYoutube").html(data.data);
+               $("#totalVideoYoutbeProgress").html(' '+data.data);
+               $("#nameVideoYoutube").html(data.name);
+               $("#statusTrans").html('(Processing..)');
+               $("#loadVideoChannel").html('<i class="icon-spinner10 spinner"></i></button>');
+               
+            }, 0);   
+    });
+
+    socket.on('server-send-admin-infoVideo' , function(data){
+        setTimeout(function() {
+         $("#nameVideoYoutube").html(data.data);
+         $("#processAdmin").html(data.countVideo);
+          }, 0);   
+    });
+    socket.on('server-send-admin-statusVideo' , function(){
+        setTimeout(function() {
+         $("#statusTrans").html('(Done)');
+          $("#loadVideoChannel").html('LOAD VIDEO');
+           $("#alert").html("<audio autoplay><source src='/audio/b.mp3' type='audio/mpeg'></audio>");
+          }, 0);   
+    });
+    </script>
+    <!-- <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/toastr.min.css"> -->
+    <style type="text/css">
+    </style>
+    <style type="text/css">
+        .popover-title {
+            padding: 8px 14px;
+            margin: 0;
+            font-size: 1rem;
+            background-color: #F7F7F7;
+            border-bottom: 1px solid #cccccc;
+            border-radius: .2075rem .2075rem 0 0;
+        }
+    
+    hr {
+    margin-top: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+.nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link:focus, .nav-pills .nav-item.open .nav-link:hover, .nav-pills .nav-link.active, .nav-pills .nav-link.active:focus, .nav-pills .nav-link.active:hover {
+    color: #FFF;
+    cursor: default;
+    background-color: #8bc34a;
+}
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            display: none;
+            outline: 0;
+        }
+    </style>
+    <!-- END Custom CSS-->
+</head>
+
+<div id="alert"></div>

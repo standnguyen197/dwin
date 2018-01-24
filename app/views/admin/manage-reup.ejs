@@ -1,0 +1,100 @@
+<% include ../layout/admin/header-admin %>
+    <style type="text/css">
+        a:focus,
+        a:hover {
+            color: #8bc34a;
+            text-decoration: none;
+        }
+
+        a {
+            color: #8bc34a;
+            text-decoration: none;
+        }
+    </style>
+    <!-- Horizontal navigation-->
+    <% include ../layout/admin/nav-admin %>
+        <!-- Horizontal navigation-->
+        <% include ../layout/admin/submenu-admin %>
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="card box-shadow-0">
+                        <div class="card-header card-head-inverse bg-light-green">
+                            <h4 class="card-title">KHU CÔNG VIỆC</h4>
+                            <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                        </div>
+                        <div class="card-body collapse in">
+                            <div class="card-block">
+                                <ul class="nav nav-pills nav-light-green">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="base-pillEle2" data-toggle="pill" href="#pillEle2" aria-expanded="true"><i class="icon-bars"></i> LOAD KÊNH</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="base-pillEle3" data-toggle="pill" href="#pillEle3" aria-expanded="false"><i class="icon-loader"></i> DOWNLOAD KÊNH</a>
+                                    </li>
+
+                                </ul>
+                                <div class="tab-content px-1 pt-1">
+
+                        <div class="tab-pane fade active in" id="pillEle2" aria-labelledby="base-pillEle2" aria-expanded="true">
+
+                            <p><b>XIN NHẬP ID KÊNH YOUTUBE</b></p>
+                            <fieldset>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="urlChannelYoutube" name="urlChannelYoutube" placeholder="NHẬP ID KÊNH YOUTUBE">
+                                <div class="input-group-btn">
+                                    <button type="button" id="loadVideoChannel" class="btn btn-light-green ">
+                                        LOAD VIDEO
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="tab-pane fade" id="pillEle3" aria-labelledby="base-pillEle3" aria-expanded="false">
+                            <p><b>XIN NHẬP ID YOUTUBE</b></p>
+                           
+                            <fieldset>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="idYoutube" placeholder="Nhập ID  YOUTUBE">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-light-green ">
+                                        DOWNLOAD
+                                    </button>
+                                   
+                                </div>
+                            </div>
+                        </fieldset>
+       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-4">
+                    <div class="card card-inverse box-shadow-0 bg-light-green">
+                        <div class="card-header">
+                            <h4 class="card-title">KHU TÌNH TRẠNG <span id="statusTrans"></span></h4>
+                            <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+
+                        </div>
+                        <div class="card-body collapse in">
+                            <div class="card-block">
+                                <b><p class="card-text"><i class="icon-android-arrow-forward"></i> TÊN VIDEO : <span id="nameVideoYoutube"> </span></p></b>
+                                <hr>
+                                <b><p class="card-text"><i class="icon-android-arrow-forward"></i> TỔNG VIDEO YOUTUBE : <span id="totalVideoYoutube">0</span> (VIDEO)</p></b>
+                                <hr>
+                                <b><p class="card-text"><i class="icon-android-arrow-forward"></i> ĐANG XỬ LÝ : <span id="processAdmin"> 0</span> /<span id="totalVideoYoutbeProgress"> 0</span> (VIDEO)</p></b>
+                                <p></p>
+
+                               
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <% include ../layout/admin/footer-admin %>

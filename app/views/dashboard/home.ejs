@@ -1,0 +1,328 @@
+<% include ../layout/dashboard/header-dashboard %>
+
+    <body data-open="hover" data-menu="horizontal-menu" data-col="2-columns" class="horizontal-layout horizontal-menu 2-columns ">
+
+        <!-- navbar-fixed-top-->
+        <nav class="navbar-fixed-top navbar-dark navbar-shadow header-navbar navbar navbar-with-menu  navbar-light navbar-border navbar-brand-center" style="border-radius: 0px;">
+            <div class="navbar-wrapper">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5 font-large-1"></i></a></li>
+                        <li class="nav-item"><a href="index.html" class="navbar-brand nav-link"><img alt="branding logo" src="app-assets/images/logo/robust-logo-dark.png" data-expand="app-assets/images/logo/robust-logo-dark.png" data-collapse="app-assets/images/logo/robust-logo-small.png" class="brand-logo"></a></li>
+                        <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container"><i class="icon-ellipsis pe-2x icon-icon-rotate-right-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-container container center-layout">
+                    <div id="navbar-mobile" class="collapse navbar-toggleable-sm">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item hidden-sm-down"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5"></i></a></li>
+                            <li class="nav-item nav-search"><a href="#" class="nav-link nav-link-search fullscreen-search-btn"><i class="ficon icon-search7"></i></a></li>
+                            <li class="nav-item hidden-sm-down"><a href="#" class="nav-link nav-link-expand"><i class="ficon icon-expand2"></i></a></li>
+                            <li class="dropdown nav-item mega-dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">MEGA</a>
+                                <ul class="mega-dropdown-menu dropdown-menu row">
+
+                                    <li class="col-md-5">
+                                        <h6 class="dropdown-menu-header text-uppercase"><i class="icon-list2"></i> Cập nhật</h6>
+                                        <div id="accordionWrap" role="tablist" aria-multiselectable="true">
+                                            <div class="card no-border box-shadow-0 collapse-icon accordion-icon-rotate">
+                                                <div id="headingOne" role="tab" class="card-header p-0 pb-1 no-border"><a data-toggle="collapse" data-parent="#accordionWrap" href="#accordionOne" aria-expanded="true" aria-controls="accordionOne" class="card-title">Cập nhật #1</a></div>
+                                                <div id="accordionOne" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" class="card-collapse collapse in">
+                                                    <div class="card-body">
+                                                        <p class="accordion-text">Caramels dessert chocolate cake pastry jujubes bonbon. Jelly wafer jelly beans. Caramels chocolate cake liquorice cake wafer jelly beans croissant apple pie.</p>
+                                                    </div>
+                                                </div>
+                                                <div id="headingTwo" role="tab" class="card-header p-0 pb-1 no-border"><a data-toggle="collapse" data-parent="#accordionWrap" href="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo" class="card-title collapsed">Cập nhật #2</a></div>
+                                                <div id="accordionTwo" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" class="card-collapse collapse">
+                                                    <div class="card-body">
+                                                        <p class="accordion-text">Sugar plum bear claw oat cake chocolate jelly tiramisu dessert pie. Tiramisu macaroon muffin jelly marshmallow cake. Pastry oat cake chupa chups.</p>
+                                                    </div>
+                                                </div>
+                                                <div id="headingThree" role="tab" class="card-header p-0 pb-1 no-border"><a data-toggle="collapse" data-parent="#accordionWrap" href="#accordionThree" aria-expanded="false" aria-controls="accordionThree" class="card-title collapsed">Accordion Group Item #3</a></div>
+                                                <div id="accordionThree" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" class="card-collapse collapse">
+                                                    <div class="card-body">
+                                                        <p class="accordion-text">Candy cupcake sugar plum oat cake wafer marzipan jujubes lollipop macaroon. Cake dragée jujubes donut chocolate bar chocolate cake cupcake chocolate topping.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-7">
+                                        <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="icon-mail6"></i> Hỗ trợ</h6>
+                                        <form>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <label for="inputName1" class="col-sm-3 form-control-label">Tên của bạn</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" id="inputName1" placeholder="John Doe" class="form-control">
+                                                    <div class="form-control-position"><i class="icon-head"></i></div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <label for="inputEmail1" class="col-sm-3 form-control-label">Email</label>
+                                                <div class="col-sm-9">
+                                                    <input type="email" id="inputEmail1" placeholder="john@example.com" class="form-control">
+                                                    <div class="form-control-position"><i class="icon-mail6"></i></div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <label for="inputMessage1" class="col-sm-3 form-control-label">Nội dung</label>
+                                                <div class="col-sm-9">
+                                                    <textarea id="inputMessage1" rows="2" placeholder="Simple Textarea" class="form-control"></textarea>
+                                                    <div class="form-control-position"><i class="icon-file-text"></i></div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="col-sm-12 mb-1">
+                                                <button type="button" class="btn btn-primary float-xs-right"><i class="icon-send-o"></i> Send</button>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav float-xs-right">
+
+                            <li class="dropdown dropdown-notification nav-item"><a href="#" data-toggle="dropdown" class="nav-link nav-link-label"><i class="ficon icon-bell4"></i><span class="tag tag-pill tag-default tag-danger tag-default tag-up">5</span></a>
+                                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                    <li class="dropdown-menu-header">
+                                        <h6 class="dropdown-header m-0"><span class="grey darken-2">Thông báo</span><span class="notification-tag tag tag-default tag-danger float-xs-right m-0">5 Tin</span></h6>
+                                    </li>
+                                    <li class="list-group scrollable-container">
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle"><i class="icon-cart3 icon-bg-circle bg-cyan"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">You have new order!</h6>
+                                                    <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p><small>
+                            <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">30 minutes ago</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle"><i class="icon-monitor3 icon-bg-circle bg-red bg-darken-1"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading red darken-1">99% Server load</h6>
+                                                    <p class="notification-text font-small-3 text-muted">Aliquam tincidunt mauris eu risus.</p><small>
+                            <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">Five hour ago</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle"><i class="icon-server2 icon-bg-circle bg-yellow bg-darken-3"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading yellow darken-3">Warning notifixation</h6>
+                                                    <p class="notification-text font-small-3 text-muted">Vestibulum auctor dapibus neque.</p><small>
+                            <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle"><i class="icon-check2 icon-bg-circle bg-green bg-accent-3"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Complete the task</h6><small>
+                            <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">Last week</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle"><i class="icon-bar-graph-2 icon-bg-circle bg-teal"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Generate monthly report</h6><small>
+                            <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">Last month</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu-footer"><a href="javascript:void(0)" class="dropdown-item text-muted text-xs-center">Read all notifications</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online"><img src="app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span><span class="user-name"><%= session.user.name %></span></a>
+                                <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i class="icon-head"></i> Edit Profile</a><a href="#" class="dropdown-item"><i class="icon-mail6"></i> My Inbox</a><a href="#" class="dropdown-item"><i class="icon-clipboard2"></i> Task</a><a href="#" class="dropdown-item"><i class="icon-calendar5"></i> Calender</a>
+                                    <div class="dropdown-divider"></div><a href="/logout" class="dropdown-item"><i class="icon-power3"></i> Đăng xuất</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="fullscreen-search" class="fullscreen-search">
+            <form class="fullscreen-search-form">
+                <input type="search" placeholder="Tìm kênh..." class="fullscreen-search-input">
+                <button type="submit" class="fullscreen-search-submit">Tìm</button>
+            </form>
+            <div class="fullscreen-search-content">
+                <div class="fullscreen-search-options">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <fieldset>
+                                <label class="custom-control custom-checkbox display-inline">
+                  <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span><span class="custom-control-description m-0">All</span>
+                </label>
+                                <label class="custom-control custom-checkbox display-inline">
+                  <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span><span class="custom-control-description m-0">Kênh của bạn</span>
+                </label>
+                                <label class="custom-control custom-checkbox display-inline">
+                  <input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span><span class="custom-control-description m-0">Video của bạn</span>
+                </label>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div><span class="fullscreen-search-close"></span>
+        </div>
+        <div class="fullscreen-search-overlay"></div>
+
+        <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+        <!-- Horizontal navigation-->
+        <div role="navigation" data-menu="menu-wrapper" class="header-navbar navbar navbar-horizontal navbar-fixed navbar-light navbar-without-dd-arrow navbar-bordered navbar-shadow">
+            <!-- Horizontal menu content-->
+            <div data-menu="menu-container" class="navbar-container main-menu-content container center-layout">
+                <!-- include ../../../includes/mixins-->
+                <ul id="main-menu-navigation" data-menu="menu-navigation" class="nav navbar-nav">
+                    <li data-menu="" class="dropdown nav-item"><a href="/go" class="nav-link"><i class="icon-home3"></i><span data-i18n="nav.dash.main">Trang chủ</span></a>
+                    </li>
+                    <li data-menu="dropdown" class="dropdown nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link"><i class="icon-paper-stack"></i><span data-i18n="nav.templates.main">Quản lý kênh</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-circle-plus"></i> Thêm kênh</a>
+                                <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-pie-graph2"></i> Thống kê</a>
+                                    <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-grid2"></i> Quản lý kênh</a>
+
+                        </ul>
+                        </li>
+                    <li data-menu="dropdown" class="dropdown nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link"><i class="icon-paper-stack"></i><span data-i18n="nav.templates.main">Công cụ</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-circle-plus"></i> Tìm kiếm từ khóa</a>
+                                <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-video"></i> Lấy thông tin video</a></li>
+                                <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-tv4"></i> Lấy thông tin kênh</a></li>
+
+                        </ul>
+                        </li>
+                    <li data-menu="dropdown" class="dropdown nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link"><i class="icon-paper-stack"></i><span data-i18n="nav.templates.main">Công cụ VIP</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-tv4"></i> Nuôi kênh</a></li>
+                            <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-calendar5"></i> Reup kênh</a></li>
+                            <li data-menu=""><a href="layout-content-detached-left-sticky-sidebar.html" data-toggle="dropdown" class="dropdown-item"><i class="icon-params"></i> Render video</a></li>
+
+                        </ul>
+                        </li>
+                        <li data-menu="dropdown" class="dropdown nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link text-danger"><i class="icon-diamond2"></i><span data-i18n="nav.category.support">Nâng cấp</span></a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a href="http://support.pixinvent.com/" data-toggle="dropdown" class="dropdown-item">Thông tin</a>
+                                </li>
+                            </ul>
+                        </li>      
+                        <li data-menu="dropdown" class="dropdown nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link"><i class="icon-help2"></i><span data-i18n="nav.category.support">Hỗ trợ</span></a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a href="http://support.pixinvent.com/" data-toggle="dropdown" class="dropdown-item">Chat live</a>
+                                </li>
+                                <li data-menu=""><a href="https://pixinvent.com/bootstrap-admin-template/robust/documentation" data-toggle="dropdown" class="dropdown-item">Gửi email</a>
+                                </li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+            <!-- /horizontal menu content-->
+        </div>
+        <!-- Horizontal navigation-->
+
+        <div class="app-content container center-layout mt-2">
+            <div class="content-wrapper">
+                <div class="content-header row">
+                </div>
+                <div class="content-body">
+                    <!-- Sales stats -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-block">
+                                        <div class="row">
+                                            <div class="col-xl-3 col-lg-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="media">
+                                                            <div class="p-2 bg-cyan white media-body text-xs-left">
+                                                                <h5>TỔNG KÊNH</h5>
+                                                                <h5 class="text-bold-400">4,392</h5>
+                                                            </div>
+                                                            <div class="p-2 text-xs-center bg-cyan bg-darken-2 media-right media-middle">
+                                                                <i class="icon-youtube font-large-2 white"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xl-3 col-lg-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                                                <div class="card">
+                                                  <div class="card-body">
+                                                      <div class="media">
+                                                          <div class="p-2 bg-deep-orange white media-body text-xs-left">
+                                                              <h5>KÊNH CHẾT</h5>
+                                                              <h5 class="text-bold-400">43</h5>
+                                                          </div>
+                                                          <div class="p-2 text-xs-center bg-deep-orange bg-darken-2 media-right media-middle">
+                                                              <i class="icon-emoticon23 font-large-2 white"></i>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="media">
+                                                            <div class="p-2 bg-teal white media-body text-xs-left">
+                                                                <h5>KÊNH SỐNG</h5>
+                                                                <h5 class="text-bold-400">4,363</h5>
+                                                            </div>
+                                                            <div class="p-2 text-xs-center bg-teal bg-darken-2 media-right media-middle">
+                                                                <i class="icon-emoticon3 font-large-2 white"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                                                <div class="card">
+                                                  <div class="card-body">
+                                                      <div class="media">
+                                                          <div class="p-2 bg-pink white media-body text-xs-left">
+                                                              <h5>TÀI KHOẢN</h5>
+                                                              <h5 class="text-bold-400">VIP PARTNER</h5>
+                                                          </div>
+                                                          <div class="p-2 text-xs-center bg-pink bg-darken-2 media-right media-middle">
+
+                                                              <i class="icon-registration font-large-2 white"></i>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Sales stats -->
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+        <% include ../layout/dashboard/footer-dashboard %>

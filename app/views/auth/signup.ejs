@@ -1,0 +1,81 @@
+<% include ../layout/auth/header-auth %>
+
+<body data-open="click" data-menu="vertical-menu" data-col="1-column" class="vertical-layout vertical-menu 1-column bg-full-screen-image blank-page blank-page">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="app-content content container-fluid">
+      <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body"><section class="flexbox-container">
+    <div class="col-md-4 offset-md-4 col-xs-10 offset-xs-1 box-shadow-2 p-0">
+        <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+            <div class="card-header no-border pb-0">
+                <div class="card-title text-xs-center">
+                    <img src="app-assets/images/logo/robust-logo-dark.png" alt="branding logo">
+                </div>
+               
+            </div>
+            <div class="card-body collapse in">
+
+                                                <% if (error.length > 0) { %>
+                          <br><div class="alert bg-danger alert-icon-left alert-arrow-left alert-dismissible fade in mb-2" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <%- error %>
+                                </div>
+
+                          <% } %>
+
+                           <% if (success.length > 0) { %>
+
+                            <script>
+                        socket.emit('client-send-signup', { my: '<%- success %>' });
+                    </script>
+                            <br><div class="alert bg-success alert-icon-left alert-arrow-left alert-dismissible fade in mb-2" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <strong><%- success %>
+                                </div>
+                          <% } %>
+
+                <p class="card-subtitle line-on-side text-muted text-xs-center font-small-3 mx-2 my-1"><span>ĐĂNG KÝ THÀNH VIÊN</span></p>
+                <div class="card-block">
+                    <form class="form-horizontal" action="/signup" method="POST">
+                        <fieldset class="form-group position-relative has-icon-left">
+                            <input type="text" class="form-control" id="user-name" placeholder="Nhập tên của bạn!" name="username" required>
+                            <div class="form-control-position">
+                                <i class="icon-head"></i>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group position-relative has-icon-left">
+                            <input type="email" name="email" class="form-control" id="user-email" placeholder="Nhập email của bạn!" required>
+                            <div class="form-control-position">
+                                <i class="icon-mail6"></i>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group position-relative has-icon-left">
+                            <input type="password" name="password" class="form-control" id="user-password" placeholder="Nhập mật khẩu của bạn!" required>
+                            <div class="form-control-position">
+                                <i class="icon-key3"></i>
+                            </div>
+                        </fieldset>
+                    
+                        <button type="submit" class="btn btn-primary btn-block"><i class="icon-head"></i> ĐĂNG KÝ</button>
+                    </form>
+                </div>
+                <p class="card-subtitle line-on-side text-muted text-xs-center font-small-3 mx-2 my-1"><span>Bạn đã có tài khoản rồi ?</span></p>
+                <div class="card-block">
+                    <a href="/login" class="btn btn-outline-primary btn-block"><i class="icon-unlock2"></i> ĐĂNG NHẬP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+      </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+<% include ../layout/auth/footer-auth %>

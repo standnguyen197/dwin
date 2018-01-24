@@ -1,0 +1,35 @@
+           getInfo(linkVideo).then(info => {
+                ytdl(linkVideo)
+                    .on('response', function(res) {
+                        bar = new ProgressBar('Downloading [:bar] :percent :etas', {
+                            complete: String.fromCharCode(0x2588),
+                            total: parseInt(res.headers['content-length'], 10)
+
+                        });
+
+                    })
+                    .on('data', function(data) {
+                        // Bắt sự kiện SOCKET IO
+                        bar.tick(data.length);
+
+                    })
+                    .on('finish', function() {
+                        console.log('Tải thành công!');
+
+                        // Bắt sự kiện SOCKET IO
+
+                        // lấy dữ liệu từ listUser emit lên server để xem dữ liệu
+                        
+
+
+                        req.flash('success', 'Tải video : ' + info.items[0].title + '  thành công!');
+                        res.redirect('/go-admin/manage-reup');
+
+                    })
+                    .pipe(fs.createWriteStream('upload/'+info.items[0]._filename));
+
+
+                // console.log(info);
+                // 	ytdl(linkVideo)
+                //  .pipe(fs.createWriteStream(info.items[0]._filename));
+            });

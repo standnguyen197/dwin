@@ -1,0 +1,107 @@
+</div>
+</div>
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////////-->
+<% if (error.length > 0) { %>
+    <script>
+        setTimeout(function() {
+            $.toast({
+                heading: '<b>THÔNG BÁO</b>',
+                text: '<%- error %>',
+                position: 'bottom-right',
+                icon: 'error',
+                hideAfter: 5000
+            });
+        }, 0);
+    </script>
+    <% } %>
+
+        <% if (success.length > 0) { %>
+            <script>
+                setTimeout(function() {
+                    $.toast({
+                        heading: '<b>THÔNG BÁO</b>',
+                        text: '<%- success %>',
+                        position: 'bottom-right',
+                        icon: 'success',
+                        hideAfter: 5000
+                    });
+                }, 0);
+            </script>
+            <% } %>
+
+                <footer class="footer undefined footer-light navbar-shadow">
+                    <p class="clearfix text-muted text-sm-center mb-0 px-2"><span class="float-md-left d-xs-block d-md-inline-block">Copyright  &copy; 2017 <a href="/" target="_blank" class="text-bold-800 grey darken-2"><%= footer_name %> </a>, All rights reserved. </span><span class="float-md-right d-xs-block d-md-inline-block"><i class="icon-heart5 pink"></i></span></p>
+                </footer>
+                    <!-- BEGIN VENDOR JS-->
+
+                    <!-- build:js app-assets/js/vendors.min.js-->
+                    <script>
+
+                    
+                            $('#loadVideoChannel').on('click', () => {
+
+                                var inputLoadVideoChannel = $('#urlChannelYoutube').val();
+
+                                socket.emit('admin-send-server-listVideoChannelYoutube' , {data : inputLoadVideoChannel});
+                                 
+                             });
+
+                            $("#urlChannelYoutube").click(function(){
+
+                                    $("#loadVideoChannel").html('LOAD VIDEO');
+                             });
+
+                      
+                    </script>
+
+                    <script src="/app-assets/vendors/js/tables/jquery.dataTables.min.js"></script>
+                    <script src="/app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
+
+                    <script src="/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/ui/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/ui/unison.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/ui/blockUI.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/ui/jquery.matchHeight-min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/ui/jquery-sliding-menu.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/sliders/slick/slick.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/ui/screenfull.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/extensions/pace.min.js" type="text/javascript"></script>
+                    <!-- /build-->
+                    <!-- BEGIN VENDOR JS-->
+                    <!-- BEGIN PAGE VENDOR JS-->
+                    <script type="text/javascript" src="/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+                    <script src="/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+
+                    <script src="/app-assets/vendors/js/extensions/moment.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/extensions/underscore-min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/extensions/clndr.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>
+                    <script src="/app-assets/vendors/js/extensions/unslider-min.js" type="text/javascript"></script>
+                    <!-- END PAGE VENDOR JS-->
+                    <!-- BEGIN ROBUST JS-->
+                    <!-- build:js app-assets/js/app.min.js-->
+                    <script src="/app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/js/core/app.min.js" type="text/javascript"></script>
+                    <script src="/app-assets/js/scripts/ui/fullscreenSearch.min.js" type="text/javascript"></script>
+                    <!-- /build-->
+                    <!-- END ROBUST JS-->
+                    <!-- BEGIN PAGE LEVEL JS-->
+                    <!-- END PAGE LEVEL JS-->
+                    <!-- POPOVER -->
+                    <script src="/app-assets/js/scripts/popover/popover.min.js" type="text/javascript"></script>
+                    
+                    <!-- END POPOVER-->
+
+                    <!-- Table data -->
+                    <!-- END PAGE VENDOR JS-->
+
+                    <script src="/app-assets/js/scripts/toastr.js" type="text/javascript"></script>
+                    <!-- <script src="/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script> -->
+
+                    </body>
+
+                    </html>
